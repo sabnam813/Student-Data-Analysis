@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+    <div class="card shadow p-4">
+        <h1 class="text-center mb-4">Student Performance Prediction</h1>
+        <form method="post" enctype="multipart/form-data" class="mb-4">
+            <div class="mb-3">
+                <label for="file" class="form-label">Upload CSV for Analysis</label>
+                <input type="file" class="form-control" id="file" name="file" accept=".csv">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload & Analyze</button>
+        </form>
+        <hr>
+        <h3>Predict Performance</h3>
+        <form action="/predict" method="POST">
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="number" name="gender" class="form-control" placeholder="Gender (0=Female,1=Male)">
+                </div>
+                <div class="col">
+                    <input type="number" name="race" class="form-control" placeholder="Race (0-4)">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="number" name="lunch" class="form-control" placeholder="Lunch (0/1)">
+                </div>
+                <div class="col">
+                    <input type="number" name="prep" class="form-control" placeholder="Test Prep (0/1)">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="number" step="any" name="math" class="form-control" placeholder="Math Score">
+                </div>
+                <div class="col">
+                    <input type="number" step="any" name="reading" class="form-control" placeholder="Reading Score">
+                </div>
+                <div class="col">
+                    <input type="number" step="any" name="writing" class="form-control" placeholder="Writing Score">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Predict</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

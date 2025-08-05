@@ -1,4 +1,4 @@
-### Student Performance Analysis & Prediction
+# Student Performance Analysis & Prediction
 This web application analyzes student performance data and predicts whether a student is a High Performer or Low Performer using a Random Forest model.
 It also provides an interactive dashboard with visual insights (gender-based & race-based score analysis) and allows uploading your own CSV for quick analysis.
 
